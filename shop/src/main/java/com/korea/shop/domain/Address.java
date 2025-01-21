@@ -3,7 +3,7 @@ package com.korea.shop.domain;
 import jakarta.persistence.Embeddable;
 
 
-// 임베디드 값 타임 설계
+// 임베디드 값 타입 설계
 @Embeddable
 public class Address {
 

@@ -14,7 +14,7 @@ public class Delivery {
     @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY) // 지연로딩
     private Order order;
 
-    @Embedded  // 임베디드 사용
+    @Embedded  // 임베디드 값타입 사용
     private Address address;
 
     @Enumerated(EnumType.STRING)

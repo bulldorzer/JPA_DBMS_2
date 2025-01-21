@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Getter
-@ToString(exclude = "categoryItems")
+@ToString(exclude = "categoryItems") // toString 메서드에서 제외시킬 양방향참조가 일어나는 객체
 // 상속관계에서 전략을 정해줌
 // 싱글 테이블로 합칠껀지 관계테이블로 관리할껀지 설정
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -23,9 +23,9 @@ public class Item {
     @Column(name = "item_id")
     private Long id;
 
-    private String name;
-    private int price;
-    private int stockQuantity;
+    private String name;        // 상품명
+    private int price;          // 가격
+    private int stockQuantity;  //재고
 
 
     @OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
