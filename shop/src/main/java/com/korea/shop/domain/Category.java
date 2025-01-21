@@ -38,6 +38,7 @@ public class Category {
         
         // 하위 카테고리 목록에 없으면 추가
         if (!this.childe.contains(category)) {
+            // this(현재 객체)와 category는 다른 것이다 조심할것 순서 특히!
             this.childe.add(category);
             category.setParent(this);
         }
