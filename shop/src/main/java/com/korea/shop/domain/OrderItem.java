@@ -22,6 +22,7 @@ public class OrderItem {
     @JoinColumn(name = "item_id")
     private Item item;
 
+    @Column(nullable = true)
     private int orderPrice;
     private int count;
 }
